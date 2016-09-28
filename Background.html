@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kimviercz.GitHub.io by kimviercz</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  
+      
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<HTML>
+   <HEAD>
+<script type="text/javascript" src="Images/IMG_1018.jpg"></script>
+<script type="text/javascript" src="Images/Germany.jpg"></script>
+<script type="text/javascript" src="Images/Prague.jpg"></script>
+
+      <TITLE>Pick A Country</TITLE>
+  
+<style>
+    html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+    body{background-image: url("Images/IMG_2556.jpg");
+    }</style>
+       
+    </HEAD>
+ 
+       
+
+
+<select id="dd1Theme" onchange="saveTheme(this.value);">
+    <option value="Images/IMG_2556.jpg"selected="selected">Default</option>
+    <option value="Select Country">Select Country</option>
+    <option value="Images/IMG_1018.jpg">Mexico</option>
+    <option value="Images/Germany.jpg">Germany<option>
+    <option value="Images/Prague.jpg">Czech Republic</option>
+</select>
+<script type="text/javascript">
+    var saveclass = null;
+
+function saveTheme(cookieValue)
+{
+    var sel = document.getElementById('dd1Theme');
+
+    saveclass = saveclass ? saveclass : document.body.className;
+    document.body.className = saveclass + ' ' + sel.value;
+
+    setCookie('theme', cookieValue, 365);
+}
+    function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+    document.addEventListener('DOMContentLoaded', function() {
+    var themeSelect = document.getElementById('ThemeSelect');
+    var selectedTheme = readCookie('theme');
+
+    themeSelect.value = selectedTheme;
+    saveclass = saveclass ? saveclass : document.body.className;
+    document.body.className = saveclass + ' ' + selectedTheme;
+});
+   /* window.onload = function(){
+        setBackground();
+    }
+        if(document.cookie.length!=0){
+            var nameValueArray = document.cookie.split("=");
+            document.bgCountry = nameValueArray[1];
+            document.getElementById("dd1Theme").value = nameValueArray[1];
+        }
+    }*/
+ /*   function setBackgroundCookie(){
+        var selectedCountry = document.getElementById("dd1Theme").value;
+        if(selectedCountry !="Select Country"){
+            document.bgCountry = selectedCountry;
+            document.cookie = "country="+selectedCountry + ";expires=Fri, 30 Sept 2016 01:00:00 UTC;";
+        }
+    }*/
+    
+/*function updateURL() {
+  var newURL = document.getElementById('url').value;
+  setCookie('URL', newURL, 365);
+  document.body.style.background = 'url('+newURL+') no-repeat';
+  document.body.style.backgroundSize = 'cover';
+  //document.body.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = newURL;
+  //document.body.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").sizingMethod = 'scale';
+}*/
+/*    
+function setBackground() {
+  var URL = getCookie('URL');
+  document.body.style.background = 'url('+URL+') no-repeat';
+  document.body.style.backgroundSize = 'cover';
+  //document.body.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = URL;
+ // document.body.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").sizingMethod = 'scale';
+}*/
+    
+    function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+/*    function checkCookie() {
+    var user=getCookie(c_value);
+    if (user != "") {
+        <style>
+    html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}*/
+/*
+    body{background-image: url("Images/IMG_2556.jpg");
+    }</style>
+        ;
+    } else  {
+       <select id="dd1Theme" name="ChangeBG">
+    <option value="Images/IMG_2556.jpg"selected="selected">Default</option>
+    <option value="Select Country">Select Country</option>
+    <option value="Images/IMG_1018.jpg">Mexico</option>
+    <option value="Images/Germany.jpg">Germany<option>
+    <option value="Images/Prague.jpg">Czech Republic</option>
+</select>
+<script type="text/javascript">
+       if (user != "" && user != null) {
+           setCookie(c_value);
+       }
+    }
+}*/
+    
+/*    function getCookie(c_name) {
+  var c_value = document.cookie;
+  var c_start = c_value.indexOf(" " + c_name + "=");
+
+  if (c_start == -1)
+    c_start = c_value.indexOf(c_name + "=");
+
+  if (c_start == -1) {
+    c_value = null;
+  } else {
+    c_start = c_value.indexOf("=", c_start) + 1;
+    var c_end = c_value.indexOf(";", c_start);
+
+    if (c_end == -1)
+      c_end = c_value.length;
+
+    c_value = unescape(c_value.substring(c_start,c_end));
+  }
+  return c_value;
+}*/
+       <body onchange="setBackgroundCookie()">
+           </script>
+       </body>
+</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+
+
+
+</script>
+</head>
+<body onload="checkCookie()">
+</body>
+</html>
+
+
+
+
+
+  
