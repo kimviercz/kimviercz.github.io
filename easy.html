@@ -54,14 +54,14 @@ li a:hover:not(.active) {
  
 
 </body>
-<img src="Images/Germany.jpg" id="helloImg">
+<img src="images/Germany.jpg" id="helloImg">
 <script>
 // Here we catch the specific 'IMG' element
 var helloImg = document.getElementById('helloImg');
 // Check is 'visited' cookie has been set
 if (-1 != document.cookie.indexOf('visited=1')) {
   // Change the 'IMG' element to another
-  helloImg.src = 'Images/IMG_0027.jpg';
+  helloImg.src = 'images/IMG_0027.jpg';
 } else {
   // Write a cookie
   document.cookie = 'visited=1;path=/';
